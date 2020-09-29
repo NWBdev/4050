@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Fetch JSON from API and Map and Lat Long</title>
+  </head>
+  <body>
+
+    <script>
+      const api_url = 'https://api.wheretheiss.at/v1/satellites/25544'
+        async function getDataISS() {
+            const response = await fetch(api_url);
+            const data = await response.json();
+            console.log(data);
+        }
+
+        getDataISS();
+
+    </script>
+
+  </body>
+</html>
